@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import profile from '../data/profile.json';
+
+const { name, title, tagline, bio, interests, projects, contact, updated } = profile;
+const pageDescription = `${tagline} — ${bio[0]}`;
+---
+
+<Base title={title} description={pageDescription}>
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">{title}</h1>
+    <p class="tagline">{tagline}</p>
+  </section>
+
+  <section class="about" aria-labelledby="about-title">
+    <h2 id="about-title">关于我</h2>
+    <div class="bio">
+      {bio.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </section>
+
+  <section class="interests" aria-labelledby="interests-title">
+    <h2 id="interests-title">兴趣</h2>
+    <ul class="interest-grid">
+      {interests.map(({ emoji, label }) => (
+        <li>
+          <span class="emoji" aria-hidden="true">{emoji}</span>
+          {label}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">作品</h2>
+    <ul class="project-list">
+      {projects.map(({ name: projectName, desc, year }) => (
+        <li>
+          <div class="project-name">{projectName}</div>
+          <p class="project-meta">{year}</p>
+          <p class="project-desc">{desc}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">联系方式</h2>
+    <ul class="contact-list">
+      <li>
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      </li>
+      <li>
+        <a href={contact.github} rel="noopener" target="_blank">{contact.github}</a>
+      </li>
+    </ul>
+  </section>
+
+  <p class="updated">最后更新：{updated}</p>
+</Base>

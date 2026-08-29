@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://youxiaoe-island.pages.dev/sitemap.xml
