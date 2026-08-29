@@ -1,0 +1,40 @@
+{
+  "name": "游小二",
+  "title": "游小二的孤岛",
+  "tagline": "一座漂在代码海上的小小灯塔",
+  "bio": [
+    "你好，我是游小二，一名喜欢折腾工具链和静态站点的开发者。",
+    "这座「孤岛」是我的个人介绍页，也是 GitHub → Cloudflare Pages 部署链路的测试站。",
+    "界面刻意保持简单干净，验证流程通畅比视觉炫目更重要。"
+  ],
+  "interests": [
+    { "emoji": "🌊", "label": "静态站点" },
+    { "emoji": "🛠️", "label": "DevOps 链路" },
+    { "emoji": "📦", "label": "容器与 WSL" },
+    { "emoji": "🔌", "label": "Obsidian 插件" },
+    { "emoji": "🗺️", "label": "开源目录" },
+    { "emoji": "☕", "label": "慢生活调试" }
+  ],
+  "projects": [
+    {
+      "name": "dshbase",
+      "desc": "Obsidian 插件目录站（示例数据，用于链路测试）",
+      "year": "2025"
+    },
+    {
+      "name": "wslcontainers",
+      "desc": "WSL 容器管理工具（示例数据，用于链路测试）",
+      "year": "2024"
+    },
+    {
+      "name": "noatmark",
+      "desc": "轻量标记与笔记实验（示例数据，用于链路测试）",
+      "year": "2024"
+    }
+  ],
+  "contact": {
+    "email": "hello@youxiaoe-island.pages.dev",
+    "github": "https://github.com/ylwl1997"
+  },
+  "updated": "2026-08-29"
+}
